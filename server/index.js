@@ -50,7 +50,7 @@ app.post('/convert', upload.single('file'), async (req, res) => {
 
       // LibreOffice converts and places file in out with same base name but .pdf
       const baseName = path.parse(originalName).name;
-      const pdfPath = path.join(outDir, `${baseName}.pdf`);
+      let pdfPath = path.join(outDir, `${baseName}.pdf`);
 
       if (!fs.existsSync(pdfPath)) {
         // Try to find any pdf file in out dir modified recently
