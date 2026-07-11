@@ -5,4 +5,5 @@ server/uploads/
 server/out/
 .DS_Store
 /dist
+client/dist/
 .env
